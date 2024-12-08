@@ -1,0 +1,149 @@
+
+
+
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en" xmlns:th="http://www.thymeleaf.org">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Classification Output</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<h1>Classification Results</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<h3>Details</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Classification Details: <strong th:text="${classificationDetails}"></strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Details: <strong th:text="${details}"></strong></p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Metrics: <strong th:text="${metrics}"></strong></p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<h3>Python Script Output</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;<pre style="background: #f4f4f4; padding: 15px; border: 1px solid #ccc;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <code th:text="${pythonOutput}">No output available</code>&ndash;&gt;-->
+<!--&lt;!&ndash;    </pre>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en" xmlns:th="http://www.thymeleaf.org">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Output Dashboard</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<h1>Python Script Output</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h3>Classification Details: </h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p th:text="${classificationDetails}"></p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <h3>Details: </h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p th:text="${details}"></p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <h3>Metrics: </h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p th:text="${metrics}"></p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <h3>Python Output:</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <pre th:text="${pythonOutput}"></pre>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <h3>Python Error Output: </h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <pre th:text="${pythonErrorOutput}"></pre>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Output Dashboard</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Python Script Output</h1>-->
+<!--<div>-->
+<!--    <h3>Classification Details:</h3>-->
+<!--    <p th:text="${classificationDetails}"></p>-->
+
+<!--    <h3>Details:</h3>-->
+<!--    <p th:text="${details}"></p>-->
+
+<!--    <h3>Metrics:</h3>-->
+<!--    <p th:text="${metrics}"></p>-->
+
+<!--    <h3>Python Output:</h3>-->
+<!--    <pre th:text="${pythonOutput}"></pre>-->
+
+<!--    <h3>Python Error Output:</h3>-->
+<!--    <pre th:text="${pythonErrorOutput}"></pre>-->
+
+<!--    &lt;!&ndash; Displaying execution time &ndash;&gt;-->
+<!--    <h3>Execution Time:</h3>-->
+<!--    <p th:text="${executionTime}">Execution time will be displayed here</p>-->
+
+<!--    &lt;!&ndash; Displaying any error messages if present &ndash;&gt;-->
+<!--    <h3>Errors:</h3>-->
+<!--    <p th:text="${error}"></p>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .output-section {
+            margin-top: 20px;
+        }
+        .error-section {
+            margin-top: 20px;
+            color: red;
+        }
+        .execution-time {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Python Script Output</h1>
+
+    <!-- Display classification details -->
+    <div class="output-section">
+        <h3>Classification Details</h3>
+        <p><strong>Classification Details:</strong> <span th:text="${classificationDetails}">[Classification Details]</span></p>
+        <p><strong>Details:</strong> <span th:text="${details}">[Details]</span></p>
+        <p><strong>Metrics:</strong> <span th:text="${metrics}">[Metrics]</span></p>
+    </div>
+
+    <!-- Display Python script output -->
+    <div class="output-section">
+        <h3>Python Script Output:</h3>
+        <pre th:text="${pythonOutput}">[Python Output]</pre>
+    </div>
+
+    <!-- Display Python script error output (if any) -->
+    <div class="error-section">
+        <h3>Error Output:</h3>
+        <pre th:text="${pythonErrorOutput}">[Error Output]</pre>
+    </div>
+
+    <!-- Display execution time -->
+    <div class="execution-time">
+        <h3>Execution Time:</h3>
+        <p th:text="${executionTime} + ' ms'">[Execution Time]</p>
+    </div>
+
+    <!-- Button to go back to the home page -->
+    <a href="/" class="btn btn-primary">Go Back</a>
+</div>
+
+<!-- Optional: Include Bootstrap JS (for styling and potential future needs) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
