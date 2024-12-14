@@ -74,16 +74,13 @@
                     <a class="nav-link" th:href="@{/usage-metrics}">Usage Metrics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="saveDashboardAsPdf()">Save PDF</a>
+                    <a class="nav-link" href="#" onclick="saveDashboardAsPdf(event)">Save PDF</a>
                 </li>
             </ul>
         </div>
 
         <div class="collapse navbar-collapse" id="rightNavbar">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link active" th:href="@{/register}">Register</a>-->
-<!--                </li>-->
                 <li class="nav-item">
                     <a class="nav-link active" th:href="@{/logout}">Logout</a>
                 </li>
@@ -109,12 +106,6 @@
         <pre th:text="${pythonOutput}">[Python Output]</pre>
     </div>
 
-<!--    &lt;!&ndash; Display Python script error output (if any) &ndash;&gt;-->
-<!--    <div class="error-section">-->
-<!--        <h3>Error Output:</h3>-->
-<!--        <pre th:text="${pythonErrorOutput}">[Error Output]</pre>-->
-<!--    </div>-->
-
     <!-- Display execution time -->
     <div class="execution-time">
         <h3>Execution Time:</h3>
@@ -133,42 +124,29 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 <!-- JavaScript -->
 <script>
-    function saveDashboardAsPdf() {
+    function saveDashboardAsPdf(event) {
+        // Prevent the default action (navigation)
+        event.preventDefault();
+
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        const classificationDetails = document.getElementById('classificationDetails').value;
-        const details = document.getElementById('details').value;
-        const metrics = document.getElementById('metrics').value;
+        // Get the text content of the elements that display the classification details
+        const classificationDetails = document.querySelector('span[th\\:text="${classificationDetails}"]').innerText;
+        const details = document.querySelector('span[th\\:text="${details}"]').innerText;
+        const metrics = document.querySelector('span[th\\:text="${metrics}"]').innerText;
 
+        // Add text to the PDF document
         doc.text("Classification Details: " + classificationDetails, 10, 10);
         doc.text("Details: " + details, 10, 30);
         doc.text("Metrics: " + metrics, 10, 50);
 
+        // Save the generated PDF
         doc.save('dashboard.pdf');
     }
-
-    document.getElementById('classificationForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(this);
-        fetch('/run-python', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = '/op';
-                } else {
-                    alert('Error running the script. Please try again.');
-                }
-            })
-            .catch(() => {
-                alert('An error occurred. Please check your input and try again.');
-            });
-    });
 </script>
 </body>
 </html>
