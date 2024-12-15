@@ -31,13 +31,17 @@ public class PythonScriptController {
     private String pythonErrorOutput = "";
     private long executionTime = 0;
 
+
+    @Value("${python.script.path}")
+    private String pythonScriptPath;
+
 //    @Value("${spring.resources.static-locations}")
 //    private String staticLocation;
 
-    private String staticLocation = "C:/Users/User/OneDrive/Desktop/ProjectFinalYr/static/";
+   private String staticLocation = "C:/Users/User/OneDrive/Desktop/ProjectFinalYr/static/";
 
 
-//    private static final String STATIC_DIR = "C:/Users/User/OneDrive/Desktop/ProjectFinalYr/static/images";
+
 
     @PostMapping("/run-python")
     public String runPythonScript(
@@ -48,7 +52,6 @@ public class PythonScriptController {
             @RequestParam("testFile") MultipartFile testFile,
             RedirectAttributes redirectAttributes) {
 
-        String pythonScriptPath = "C:\\Users\\User\\OneDrive\\Desktop\\ProjectFinalYr\\Python_script\\1.py";
 
         Path tempDir;
         long startTime = System.currentTimeMillis();
