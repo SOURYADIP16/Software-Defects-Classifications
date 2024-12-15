@@ -1,0 +1,107 @@
+[
+  {
+    "Classifier": "KNeighborsClassifier",
+    "Metrics": {
+      "Confusion Matrix": [
+        [
+          28717,
+          2841
+        ],
+        [
+          5921,
+          3227
+        ]
+      ],
+      "Confusion Matrix Plot": "KNeighborsClassifier_confusion_matrix.png",
+      "Accuracy": 78.47,
+      "Recall": 0.35,
+      "Precision": 0.53,
+      "ROC AUC": 0.63,
+      "ROC AUC Prob": 0.71
+    }
+  },
+  {
+    "Classifier": "DecisionTreeClassifier",
+    "Metrics": {
+      "Confusion Matrix": [
+        [
+          25733,
+          5825
+        ],
+        [
+          5461,
+          3687
+        ]
+      ],
+      "Confusion Matrix Plot": "DecisionTreeClassifier_confusion_matrix.png",
+      "Accuracy": 72.27,
+      "Recall": 0.4,
+      "Precision": 0.39,
+      "ROC AUC": 0.61,
+      "ROC AUC Prob": 0.61
+    }
+  },
+  {
+    "Classifier": "AdaBoostClassifier",
+    "Metrics": {
+      "Confusion Matrix": [
+        [
+          29729,
+          1829
+        ],
+        [
+          5831,
+          3317
+        ]
+      ],
+      "Confusion Matrix Plot": "AdaBoostClassifier_confusion_matrix.png",
+      "Accuracy": 81.18,
+      "Recall": 0.36,
+      "Precision": 0.64,
+      "ROC AUC": 0.65,
+      "ROC AUC Prob": 0.79
+    }
+  },
+  {
+    "Classifier": "GradientBoostingClassifier",
+    "Metrics": {
+      "Confusion Matrix": [
+        [
+          29766,
+          1792
+        ],
+        [
+          5826,
+          3322
+        ]
+      ],
+      "Confusion Matrix Plot": "GradientBoostingClassifier_confusion_matrix.png",
+      "Accuracy": 81.29,
+      "Recall": 0.36,
+      "Precision": 0.65,
+      "ROC AUC": 0.65,
+      "ROC AUC Prob": 0.79
+    }
+  },
+  {
+    "Classifier": "RandomForestClassifier",
+    "Metrics": {
+      "Confusion Matrix": [
+        [
+          30280,
+          1278
+        ],
+        [
+          6614,
+          2534
+        ]
+      ],
+      "Confusion Matrix Plot": "RandomForestClassifier_confusion_matrix.png",
+      "Accuracy": 80.61,
+      "Recall": 0.28,
+      "Precision": 0.66,
+      "ROC AUC": 0.62,
+      "ROC AUC Prob": 0.77
+    }
+  }
+]

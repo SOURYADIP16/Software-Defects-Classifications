@@ -1,3 +1,222 @@
+<!-- -->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Operation Dashboard</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"-->
+<!--          rel="stylesheet"-->
+<!--          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"-->
+<!--          crossorigin="anonymous">-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background-color: #f4f7fc;-->
+<!--            font-family: 'Arial', sans-serif;-->
+<!--        }-->
+<!--        .navbar {-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+<!--        .output-section, .error-section, .execution-time {-->
+<!--            background-color: #ffffff;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);-->
+<!--            padding: 20px;-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+<!--        .output-section h3, .error-section h3, .execution-time h3 {-->
+<!--            color: #5c6bc0;-->
+<!--        }-->
+<!--        .execution-time {-->
+<!--            font-size: 18px;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+<!--        .error-section {-->
+<!--            background-color: #ffe6e6;-->
+<!--            border: 1px solid #f44336;-->
+<!--        }-->
+<!--        .alert-danger {-->
+<!--            margin-top: 20px;-->
+<!--        }-->
+<!--        .btn-primary {-->
+<!--            background-color: #5c6bc0;-->
+<!--            border-color: #5c6bc0;-->
+<!--        }-->
+<!--        .btn-primary:hover {-->
+<!--            background-color: #3f51b5;-->
+<!--            border-color: #3f51b5;-->
+<!--        }-->
+<!--        pre {-->
+<!--            background-color: #f1f1f1;-->
+<!--            border-radius: 8px;-->
+<!--            padding: 15px;-->
+<!--            font-family: 'Courier New', Courier, monospace;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--&lt;!&ndash; Navbar &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="#">Registration and Login System</a>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#leftNavbar"-->
+<!--                aria-controls="leftNavbar" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+<!--        <div class="collapse navbar-collapse" id="leftNavbar">-->
+<!--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/index}">Home</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/usage-metrics}">Usage Metrics</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <button class="btn btn-success" onclick="saveDashboardAsPdf(event)">Download as PDF</button>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+<!--        <div class="collapse navbar-collapse" id="rightNavbar">-->
+<!--            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link active" th:href="@{/logout}">Logout</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<div class="container" id="dashboard">-->
+<!--    <h1 class="text-center text-primary mb-4">Python Script Output Dashboard</h1>-->
+
+<!--    &lt;!&ndash; Display classification details &ndash;&gt;-->
+<!--    <div class="output-section">-->
+<!--        <h3>Classification Details</h3>-->
+<!--        <p><strong>Classification Details:</strong> <span th:text="${classificationDetails}">[Classification Details]</span></p>-->
+<!--        <p><strong>Details:</strong> <span th:text="${details}">[Details]</span></p>-->
+<!--        <p><strong>Metrics:</strong> <span th:text="${metrics}">[Metrics]</span></p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Display Python script output &ndash;&gt;-->
+<!--    <div class="output-section">-->
+<!--        <h3>Python Script Output:</h3>-->
+<!--        <pre th:text="${pythonOutput}">[Python Output]</pre>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Display execution time &ndash;&gt;-->
+<!--    <div class="execution-time">-->
+<!--        <h3>Execution Time:</h3>-->
+<!--        <p th:text="${executionTime} + ' ms'">[Execution Time]</p>-->
+<!--    </div>-->
+
+<!--    <div th:if="${errorMessage}" class="alert alert-danger">-->
+<!--        <p th:text="${errorMessage}"></p>-->
+<!--    </div>-->
+
+<!--     -->
+
+
+<!--    &lt;!&ndash; Button to go back to the home page &ndash;&gt;-->
+<!--    <a href="/users" class="btn btn-primary">Go Back</a>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    async function saveDashboardAsPdf() {-->
+<!--        const { jsPDF } = window.jspdf;-->
+<!--        const dashboard = document.getElementById('dashboard');-->
+<!--        const downloadButton = document.querySelector('.btn-success'); // Target the download button-->
+
+<!--        // Hide the button before capturing-->
+<!--        downloadButton.style.display = 'none';-->
+
+<!--        // Capture the dashboard using html2canvas-->
+<!--        const canvas = await html2canvas(dashboard, {-->
+<!--            scale: 2, // Higher scale for better resolution-->
+<!--        });-->
+<!--        const imgData = canvas.toDataURL('image/png');-->
+
+<!--        // Restore the button's visibility after capturing-->
+<!--        downloadButton.style.display = 'block';-->
+
+<!--        // Create a new PDF document-->
+<!--        const pdf = new jsPDF('p', 'mm', 'a4');-->
+<!--        const pdfWidth = pdf.internal.pageSize.getWidth(); // A4 width in mm-->
+<!--        const pdfHeight = pdf.internal.pageSize.getHeight(); // A4 height in mm-->
+
+<!--        // Define margins (1.5 cm = 15 mm)-->
+<!--        const margin = 15;-->
+<!--        const contentWidth = pdfWidth - 2 * margin;-->
+<!--        const contentHeight = pdfHeight - 2 * margin;-->
+
+<!--        // Canvas dimensions-->
+<!--        const imgWidth = contentWidth; // Content fits within the margins-->
+<!--        const imgHeight = (canvas.height * imgWidth) / canvas.width;-->
+
+<!--        // Height and position management-->
+<!--        let yPosition = 0;-->
+<!--        const chunkHeight = (canvas.width * contentHeight) / imgWidth;-->
+
+<!--        while (yPosition < canvas.height) {-->
+<!--            // Create a cropped section of the canvas-->
+<!--            const sectionCanvas = document.createElement('canvas');-->
+<!--            sectionCanvas.width = canvas.width;-->
+<!--            sectionCanvas.height = Math.min(chunkHeight, canvas.height - yPosition);-->
+
+<!--            const ctx = sectionCanvas.getContext('2d');-->
+<!--            ctx.drawImage(-->
+<!--                canvas,-->
+<!--                0,-->
+<!--                yPosition,-->
+<!--                canvas.width,-->
+<!--                sectionCanvas.height,-->
+<!--                0,-->
+<!--                0,-->
+<!--                sectionCanvas.width,-->
+<!--                sectionCanvas.height-->
+<!--            );-->
+
+<!--            // Add the cropped section to the PDF-->
+<!--            const sectionData = sectionCanvas.toDataURL('image/png');-->
+<!--            pdf.addImage(-->
+<!--                sectionData,-->
+<!--                'PNG',-->
+<!--                margin, // X-offset to include the left margin-->
+<!--                margin, // Y-offset to include the top margin-->
+<!--                imgWidth,-->
+<!--                (sectionCanvas.height * imgWidth) / canvas.width-->
+<!--            );-->
+
+<!--            yPosition += chunkHeight;-->
+
+<!--            // Add a new page if needed-->
+<!--            if (yPosition < canvas.height) {-->
+<!--                pdf.addPage();-->
+<!--            }-->
+<!--        }-->
+
+<!--        // Save the PDF-->
+<!--        pdf.save('dashboard.pdf');-->
+<!--    }-->
+<!--</script>-->
+
+
+
+<!--&lt;!&ndash; Optional: Include Bootstrap JS &ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -9,6 +228,7 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         body {
             background-color: #f4f7fc;
@@ -52,6 +272,15 @@
             padding: 15px;
             font-family: 'Courier New', Courier, monospace;
         }
+        .image-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .image-list img {
+            max-width: 200px;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -74,7 +303,7 @@
                     <a class="nav-link" th:href="@{/usage-metrics}">Usage Metrics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="saveDashboardAsPdf(event)">Save PDF</a>
+                    <button class="btn btn-success" onclick="saveDashboardAsPdf(event)">Download as PDF</button>
                 </li>
             </ul>
         </div>
@@ -89,7 +318,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container" id="dashboard">
     <h1 class="text-center text-primary mb-4">Python Script Output Dashboard</h1>
 
     <!-- Display classification details -->
@@ -111,7 +340,24 @@
         <h3>Execution Time:</h3>
         <p th:text="${executionTime} + ' ms'">[Execution Time]</p>
     </div>
+    <!-- Image List -->
+    <div class="output-section">
+        <h3>Images</h3>
+        <div class="image-list">
+            <ul>
+                <li th:each="image : ${imageList}">
+                    <!-- Dynamically set image path -->
+                    <img th:src="@{'/' + ${image}}" alt="Image" />
+                    <!-- Display image file name -->
+                    <p th:text="${image}"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    </div>
+
+    <!-- Display error message if present -->
     <div th:if="${errorMessage}" class="alert alert-danger">
         <p th:text="${errorMessage}"></p>
     </div>
@@ -120,33 +366,84 @@
     <a href="/users" class="btn btn-primary">Go Back</a>
 </div>
 
-<!-- Optional: Include Bootstrap JS (for styling and potential future needs) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<!-- JavaScript -->
 <script>
-    function saveDashboardAsPdf(event) {
-        // Prevent the default action (navigation)
-        event.preventDefault();
-
+    async function saveDashboardAsPdf() {
         const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
+        const dashboard = document.getElementById('dashboard');
+        const downloadButton = document.querySelector('.btn-success'); // Target the download button
 
-        // Get the text content of the elements that display the classification details
-        const classificationDetails = document.querySelector('span[th\\:text="${classificationDetails}"]').innerText;
-        const details = document.querySelector('span[th\\:text="${details}"]').innerText;
-        const metrics = document.querySelector('span[th\\:text="${metrics}"]').innerText;
+        // Hide the button before capturing
+        downloadButton.style.display = 'none';
 
-        // Add text to the PDF document
-        doc.text("Classification Details: " + classificationDetails, 10, 10);
-        doc.text("Details: " + details, 10, 30);
-        doc.text("Metrics: " + metrics, 10, 50);
+        // Capture the dashboard using html2canvas
+        const canvas = await html2canvas(dashboard, {
+            scale: 2, // Higher scale for better resolution
+        });
+        const imgData = canvas.toDataURL('image/png');
 
-        // Save the generated PDF
-        doc.save('dashboard.pdf');
+        // Restore the button's visibility after capturing
+        downloadButton.style.display = 'block';
+
+        // Create a new PDF document
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const pdfWidth = pdf.internal.pageSize.getWidth(); // A4 width in mm
+        const pdfHeight = pdf.internal.pageSize.getHeight(); // A4 height in mm
+
+        // Define margins (1.5 cm = 15 mm)
+        const margin = 15;
+        const contentWidth = pdfWidth - 2 * margin;
+        const contentHeight = pdfHeight - 2 * margin;
+
+        // Canvas dimensions
+        const imgWidth = contentWidth; // Content fits within the margins
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        // Height and position management
+        let yPosition = 0;
+        const chunkHeight = (canvas.width * contentHeight) / imgWidth;
+
+        while (yPosition < canvas.height) {
+            // Create a cropped section of the canvas
+            const sectionCanvas = document.createElement('canvas');
+            sectionCanvas.width = canvas.width;
+            sectionCanvas.height = Math.min(chunkHeight, canvas.height - yPosition);
+
+            const ctx = sectionCanvas.getContext('2d');
+            ctx.drawImage(
+                canvas,
+                0,
+                yPosition,
+                canvas.width,
+                sectionCanvas.height,
+                0,
+                0,
+                sectionCanvas.width,
+                sectionCanvas.height
+            );
+
+            // Add the cropped section to the PDF
+            const sectionData = sectionCanvas.toDataURL('image/png');
+            pdf.addImage(
+                sectionData,
+                'PNG',
+                margin, // X-offset to include the left margin
+                margin, // Y-offset to include the top margin
+                imgWidth,
+                (sectionCanvas.height * imgWidth) / canvas.width
+            );
+
+            yPosition += chunkHeight;
+
+            // Add a new page if needed
+            if (yPosition < canvas.height) {
+                pdf.addPage();
+            }
+        }
+
+        // Save the PDF
+        pdf.save('dashboard.pdf');
     }
 </script>
+
 </body>
 </html>

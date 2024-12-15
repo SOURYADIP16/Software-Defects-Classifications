@@ -1,5 +1,6 @@
 package com.ProjectFinalYr.CSE.registrationlogin.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +15,10 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
-
 @Controller
 public class PythonScriptController {
 
@@ -28,6 +30,14 @@ public class PythonScriptController {
     private String pythonOutput = "";
     private String pythonErrorOutput = "";
     private long executionTime = 0;
+
+//    @Value("${spring.resources.static-locations}")
+//    private String staticLocation;
+
+    private String staticLocation = "C:/Users/User/OneDrive/Desktop/ProjectFinalYr/static/";
+
+
+//    private static final String STATIC_DIR = "C:/Users/User/OneDrive/Desktop/ProjectFinalYr/static/images";
 
     @PostMapping("/run-python")
     public String runPythonScript(
@@ -83,7 +93,6 @@ public class PythonScriptController {
                 this.pythonErrorOutput = null;  // Set to null when there is no error output
             }
 
-
             // Update class-level attributes
             this.classificationDetails = classificationDetails;
             this.details = details;
@@ -119,6 +128,34 @@ public class PythonScriptController {
 
     @GetMapping("/op")
     public String showOpPage(Model model) {
+        // Log the static folder path for debugging
+        logger.info("Static folder path: {}", staticLocation);
+
+        // Fetch image files from the static folder
+        File folder = new File(staticLocation);
+        // Ensure the folder exists and is a directory before listing files
+        if (folder.exists() && folder.isDirectory()) {
+            // Filter image files (JPEG, PNG, JPG)
+            File[] listOfFiles = folder.listFiles((dir, name) -> name.endsWith(".jpg") || name.endsWith(".png") || name.endsWith(".jpeg"));
+
+            // Log the found files for debugging
+            if (listOfFiles != null && listOfFiles.length > 0) {
+                logger.info("Found image files: {}", Arrays.toString(listOfFiles));
+                // Convert file names to a list of strings
+                List<String> imageList = Arrays.stream(listOfFiles)
+                        .map(File::getName) // Get the file name only
+                        .collect(Collectors.toList());
+                model.addAttribute("imageList", imageList);
+            } else {
+                logger.error("No image files found in the static directory.");
+                model.addAttribute("errorMessage", "No image files found.");
+            }
+        } else {
+            logger.error("Static directory does not exist or is not a directory.");
+            model.addAttribute("errorMessage", "The static directory is not accessible.");
+        }
+
+        // Pass the Python execution data to the model
         model.addAttribute("classificationDetails", this.classificationDetails);
         model.addAttribute("details", this.details);
         model.addAttribute("metrics", this.metrics);
@@ -126,7 +163,9 @@ public class PythonScriptController {
         model.addAttribute("pythonErrorOutput", this.pythonErrorOutput);
         model.addAttribute("executionTime", this.executionTime);
 
+        // Log the data being passed to the model for debugging
         logger.info("Data passed to the /op page: {}", model);
+
         return "op";  // Return the output page
     }
 
