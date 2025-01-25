@@ -1001,7 +1001,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:25:08.793+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.ProjectFinalYr.CSE.registrationlogin.entity.User) `staticFetchableList` generator
 2024-12-02T07:25:08.793+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users#{element}]) - element descriptor
 2024-12-02T07:25:09.018+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:25:09.022+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] 
+2024-12-02T07:25:09.022+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
 2024-12-02T07:25:09.047+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.name]
@@ -1022,10 +1022,10 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:25:09.068+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update roles set name=? where id=?
 2024-12-02T07:25:09.068+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from roles where id=?
 2024-12-02T07:25:09.068+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:25:09.068+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:25:09.068+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:25:09.070+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:25:09.079+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:25:09.082+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@1b82f62a] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:25:09.079+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:25:09.082+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@1b82f62a] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:25:09.084+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:25:09.087+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
@@ -1060,8 +1060,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:25:09.091+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update users set email=?,name=?,password=? where id=?
 2024-12-02T07:25:09.091+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from users where id=?
 2024-12-02T07:25:09.093+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:25:09.093+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] 
-2024-12-02T07:25:09.093+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@32c8d67] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] 
+2024-12-02T07:25:09.093+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
+2024-12-02T07:25:09.093+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@32c8d67] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}]
 2024-12-02T07:25:09.095+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_1
 2024-12-02T07:25:09.100+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
@@ -1082,8 +1082,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 
 2024-12-02T07:25:09.102+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.jdbc.mutation          : Static SQL for collection: com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users
 2024-12-02T07:25:09.102+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:25:09.103+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:25:09.103+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@55d8f6bb] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:25:09.103+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:25:09.103+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@55d8f6bb] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:25:09.103+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:25:09.104+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
@@ -1359,7 +1359,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:25:12.263+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 2024-12-02T07:25:12.263+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 2024-12-02T07:25:12.263+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-2024-12-02T07:25:12.453+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:25:12.453+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.AuthController:
 	{GET [/index]}: home()
 	{POST [/register/save]}: registration(UserDto,BindingResult,Model)
@@ -1368,10 +1368,10 @@ java.lang.Exception: exception just for purpose of providing stack trace
 	{POST [/run-python]}: runPythonScript(MultipartFile,MultipartFile,RedirectAttributes)
 	{GET [/users]}: listRegisteredUsers(Model)
 	{GET [/register]}: showRegistrationForm(Model)
-2024-12-02T07:25:12.468+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:25:12.468+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.FileUploadController:
 	{POST [/upload]}: handleFileUpload(MultipartFile,MultipartFile,RedirectAttributes)
-2024-12-02T07:25:12.480+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:25:12.480+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -1626,7 +1626,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:25:15.011+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482623
 2024-12-02T07:25:15.011+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerGracefulShutdown'
 2024-12-02T07:25:15.011+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2024-12-02T07:25:15.062+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-12-02T07:25:15.062+05:30 DEBUG 2648 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -3844,7 +3844,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:27:15.873+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.ProjectFinalYr.CSE.registrationlogin.entity.User) `staticFetchableList` generator
 2024-12-02T07:27:15.873+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users#{element}]) - element descriptor
 2024-12-02T07:27:16.081+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:27:16.084+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] 
+2024-12-02T07:27:16.084+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
 2024-12-02T07:27:16.108+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.name]
@@ -3865,10 +3865,10 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:27:16.125+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update roles set name=? where id=?
 2024-12-02T07:27:16.125+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from roles where id=?
 2024-12-02T07:27:16.125+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:27:16.126+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:27:16.126+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:27:16.128+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:27:16.135+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:27:16.137+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@44e0c3d] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:27:16.135+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:27:16.137+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@44e0c3d] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:27:16.138+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:27:16.142+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
@@ -3903,8 +3903,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:27:16.144+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update users set email=?,name=?,password=? where id=?
 2024-12-02T07:27:16.144+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from users where id=?
 2024-12-02T07:27:16.146+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:27:16.146+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] 
-2024-12-02T07:27:16.146+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@a20898c] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] 
+2024-12-02T07:27:16.146+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
+2024-12-02T07:27:16.146+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@a20898c] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}]
 2024-12-02T07:27:16.147+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_1
 2024-12-02T07:27:16.150+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
@@ -3925,8 +3925,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 
 2024-12-02T07:27:16.151+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.jdbc.mutation          : Static SQL for collection: com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users
 2024-12-02T07:27:16.151+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:27:16.151+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:27:16.151+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@5c43cb12] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:27:16.151+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:27:16.151+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@5c43cb12] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:27:16.151+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:27:16.152+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
@@ -4202,7 +4202,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:27:17.980+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 2024-12-02T07:27:17.981+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 2024-12-02T07:27:17.981+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-2024-12-02T07:27:18.031+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:27:18.031+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.AuthController:
 	{GET [/index]}: home()
 	{POST [/register/save]}: registration(UserDto,BindingResult,Model)
@@ -4211,10 +4211,10 @@ java.lang.Exception: exception just for purpose of providing stack trace
 	{POST [/run-python]}: runPythonScript(MultipartFile,MultipartFile,RedirectAttributes)
 	{GET [/users]}: listRegisteredUsers(Model)
 	{GET [/register]}: showRegistrationForm(Model)
-2024-12-02T07:27:18.050+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:27:18.050+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.FileUploadController:
 	{POST [/upload]}: handleFileUpload(MultipartFile,MultipartFile,RedirectAttributes)
-2024-12-02T07:27:18.065+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:27:18.065+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -4469,7 +4469,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:27:20.914+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482623
 2024-12-02T07:27:20.914+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerGracefulShutdown'
 2024-12-02T07:27:20.914+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2024-12-02T07:27:20.973+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-12-02T07:27:20.973+05:30 DEBUG 2216 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -6691,7 +6691,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:30:06.530+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.ProjectFinalYr.CSE.registrationlogin.entity.User) `staticFetchableList` generator
 2024-12-02T07:30:06.530+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users#{element}]) - element descriptor
 2024-12-02T07:30:06.719+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:30:06.722+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] 
+2024-12-02T07:30:06.722+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
 2024-12-02T07:30:06.755+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.name]
@@ -6712,10 +6712,10 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:30:06.786+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update roles set name=? where id=?
 2024-12-02T07:30:06.787+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from roles where id=?
 2024-12-02T07:30:06.797+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:30:06.797+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:30:06.797+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:30:06.800+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:30:06.808+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:30:06.811+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4946dfde] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:30:06.808+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:30:06.811+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4946dfde] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:30:06.813+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:30:06.816+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
@@ -6750,8 +6750,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:30:06.818+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update users set email=?,name=?,password=? where id=?
 2024-12-02T07:30:06.819+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from users where id=?
 2024-12-02T07:30:06.821+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:30:06.821+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] 
-2024-12-02T07:30:06.821+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@7607340f] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] 
+2024-12-02T07:30:06.821+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
+2024-12-02T07:30:06.821+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@7607340f] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}]
 2024-12-02T07:30:06.822+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_1
 2024-12-02T07:30:06.826+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
@@ -6772,8 +6772,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 
 2024-12-02T07:30:06.827+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.jdbc.mutation          : Static SQL for collection: com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users
 2024-12-02T07:30:06.827+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:30:06.827+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:30:06.827+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@1b881f1f] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:30:06.827+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:30:06.827+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@1b881f1f] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:30:06.827+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:30:06.828+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
@@ -7049,7 +7049,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:30:08.810+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 2024-12-02T07:30:08.811+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 2024-12-02T07:30:08.811+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-2024-12-02T07:30:08.874+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:30:08.874+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.AuthController:
 	{GET [/index]}: home()
 	{POST [/register/save]}: registration(UserDto,BindingResult,Model)
@@ -7058,10 +7058,10 @@ java.lang.Exception: exception just for purpose of providing stack trace
 	{GET [/op]}: showNewDashboard(Model)
 	{GET [/register]}: showRegistrationForm(Model)
 	{GET [/users]}: listRegisteredUsers(Model)
-2024-12-02T07:30:08.900+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:30:08.900+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.FileUploadController:
 	{POST [/upload]}: handleFileUpload(MultipartFile,MultipartFile,RedirectAttributes)
-2024-12-02T07:30:09.033+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:30:09.033+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -7316,7 +7316,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:30:11.482+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482623
 2024-12-02T07:30:11.482+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerGracefulShutdown'
 2024-12-02T07:30:11.482+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2024-12-02T07:30:11.508+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-12-02T07:30:11.508+05:30 DEBUG 11232 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -10177,7 +10177,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:45:50.816+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.ProjectFinalYr.CSE.registrationlogin.entity.User) `staticFetchableList` generator
 2024-12-02T07:45:50.816+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users#{element}]) - element descriptor
 2024-12-02T07:45:51.005+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:45:51.008+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] 
+2024-12-02T07:45:51.008+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
 2024-12-02T07:45:51.041+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.name]
@@ -10198,10 +10198,10 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:45:51.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update roles set name=? where id=?
 2024-12-02T07:45:51.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from roles where id=?
 2024-12-02T07:45:51.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:45:51.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:45:51.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:45:51.068+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:45:51.082+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:45:51.085+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@7aa1fb0e] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:45:51.082+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:45:51.085+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@7aa1fb0e] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:45:51.087+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:45:51.093+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
@@ -10236,8 +10236,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:45:51.095+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update users set email=?,name=?,password=? where id=?
 2024-12-02T07:45:51.095+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from users where id=?
 2024-12-02T07:45:51.097+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:45:51.097+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] 
-2024-12-02T07:45:51.097+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@42ac309] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] 
+2024-12-02T07:45:51.097+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
+2024-12-02T07:45:51.097+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@42ac309] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}]
 2024-12-02T07:45:51.098+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_1
 2024-12-02T07:45:51.102+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
@@ -10258,8 +10258,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 
 2024-12-02T07:45:51.103+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.jdbc.mutation          : Static SQL for collection: com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users
 2024-12-02T07:45:51.103+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:45:51.103+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:45:51.103+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2de07c57] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:45:51.103+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:45:51.103+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@2de07c57] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:45:51.103+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:45:51.104+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
@@ -10535,7 +10535,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:45:53.115+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 2024-12-02T07:45:53.115+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 2024-12-02T07:45:53.115+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-2024-12-02T07:45:53.172+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:45:53.172+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.AuthController:
 	{GET [/index]}: home()
 	{POST [/register/save]}: registration(UserDto,BindingResult,Model)
@@ -10544,10 +10544,10 @@ java.lang.Exception: exception just for purpose of providing stack trace
 	{GET [/op]}: showNewDashboard(Model)
 	{GET [/login]}: loginForm()
 	{POST [/run-python]}: runPythonScript(String,String,String,MultipartFile,MultipartFile,Model)
-2024-12-02T07:45:53.190+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:45:53.190+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.FileUploadController:
 	{POST [/upload]}: handleFileUpload(MultipartFile,MultipartFile,RedirectAttributes)
-2024-12-02T07:45:53.202+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:45:53.202+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -10802,7 +10802,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:45:55.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482623
 2024-12-02T07:45:55.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerGracefulShutdown'
 2024-12-02T07:45:55.065+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2024-12-02T07:45:55.088+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-12-02T07:45:55.088+05:30 DEBUG 12772 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -12453,9 +12453,9 @@ Unconditional classes:
 2024-12-02T07:46:43.610+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /login
 2024-12-02T07:46:43.846+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
 2024-12-02T07:46:44.149+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:46:44.151+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1458030165800))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:46:44.151+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1458030165800))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:46:44.174+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@13557f1e
-2024-12-02T07:46:44.175+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1458030165800).email) 
+2024-12-02T07:46:44.175+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1458030165800).email)
 2024-12-02T07:46:44.195+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1458030165800)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1458030165800).email]
@@ -12524,7 +12524,7 @@ Unconditional classes:
 2024-12-02T07:46:44.688+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.h.e.t.internal.TransactionImpl         : begin
 2024-12-02T07:46:44.694+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6733854]
 2024-12-02T07:46:44.705+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:46:44.706+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1510432538300))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:46:44.706+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1510432538300))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:46:44.706+05:30 DEBUG 12772 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1510432538300)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1510432538300).email]
@@ -13741,7 +13741,7 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:54:26.246+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : Entity(com.ProjectFinalYr.CSE.registrationlogin.entity.User) `staticFetchableList` generator
 2024-12-02T07:54:26.246+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.hibernate.orm.model.mapping.creation   : Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users#{element}]) - element descriptor
 2024-12-02T07:54:26.414+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:54:26.424+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] 
+2024-12-02T07:54:26.424+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
 2024-12-02T07:54:26.454+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.Role]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.name]
@@ -13762,10 +13762,10 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:54:26.480+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update roles set name=? where id=?
 2024-12-02T07:54:26.481+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from roles where id=?
 2024-12-02T07:54:26.481+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:54:26.481+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:54:26.481+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:54:26.490+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:54:26.501+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:54:26.503+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4b74a67a] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:54:26.501+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:54:26.503+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4b74a67a] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:54:26.506+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:54:26.510+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
@@ -13800,8 +13800,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 2024-12-02T07:54:26.512+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Update (0): update users set email=?,name=?,password=? where id=?
 2024-12-02T07:54:26.512+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.h.p.entity.AbstractEntityPersister     :  Delete (0): delete from users where id=?
 2024-12-02T07:54:26.514+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:54:26.515+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] 
-2024-12-02T07:54:26.515+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@7d216ee8] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] 
+2024-12-02T07:54:26.515+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
+2024-12-02T07:54:26.515+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@7d216ee8] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users.{element}]
 2024-12-02T07:54:26.520+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_1
 2024-12-02T07:54:26.523+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users]
@@ -13822,8 +13822,8 @@ java.lang.ClassNotFoundException: java.text.ListFormat
 
 2024-12-02T07:54:26.523+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.jdbc.mutation          : Static SQL for collection: com.ProjectFinalYr.CSE.registrationlogin.entity.Role.users
 2024-12-02T07:54:26.523+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_0
-2024-12-02T07:54:26.523+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] 
-2024-12-02T07:54:26.523+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@59d09ff3] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] 
+2024-12-02T07:54:26.523+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [CollectionTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles)] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
+2024-12-02T07:54:26.523+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@59d09ff3] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles.{element}]
 2024-12-02T07:54:26.524+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.sql.ast.create         : Created new SQL alias : r1_1
 2024-12-02T07:54:26.524+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-CollectionDomainResult [com.ProjectFinalYr.CSE.registrationlogin.entity.User.roles]
@@ -14099,7 +14099,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:54:28.568+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
 2024-12-02T07:54:28.568+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
 2024-12-02T07:54:28.568+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
-2024-12-02T07:54:28.727+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:54:28.727+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.AuthController:
 	{GET [/index]}: home()
 	{POST [/register/save]}: registration(UserDto,BindingResult,Model)
@@ -14108,10 +14108,10 @@ java.lang.Exception: exception just for purpose of providing stack trace
 	{GET [/op]}: showNewDashboard(Model)
 	{POST [/run-python]}: runPythonScript(String,String,String,MultipartFile,MultipartFile,Model)
 	{GET [/login]}: loginForm()
-2024-12-02T07:54:28.755+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:54:28.755+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	c.P.C.r.c.FileUploadController:
 	{POST [/upload]}: handleFileUpload(MultipartFile,MultipartFile,RedirectAttributes)
-2024-12-02T07:54:28.776+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  : 
+2024-12-02T07:54:28.776+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] _.s.web.servlet.HandlerMapping.Mappings  :
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
@@ -14366,7 +14366,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2024-12-02T07:54:30.338+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482623
 2024-12-02T07:54:30.338+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerGracefulShutdown'
 2024-12-02T07:54:30.338+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2024-12-02T07:54:30.369+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-12-02T07:54:30.369+05:30 DEBUG 6632 --- [ProjectFinalYr] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -16017,9 +16017,9 @@ Unconditional classes:
 2024-12-02T07:55:15.467+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /login
 2024-12-02T07:55:15.692+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
 2024-12-02T07:55:15.933+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:55:15.934+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:55:15.934+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:55:15.979+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@f8d8a57
-2024-12-02T07:55:15.980+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email) 
+2024-12-02T07:55:15.980+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email)
 2024-12-02T07:55:15.996+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email]
@@ -16088,7 +16088,7 @@ Unconditional classes:
 2024-12-02T07:55:16.451+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.h.e.t.internal.TransactionImpl         : begin
 2024-12-02T07:55:16.454+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7709e395]
 2024-12-02T07:55:16.467+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T07:55:16.467+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(2022193290200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T07:55:16.467+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(2022193290200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T07:55:16.468+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(2022193290200)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(2022193290200).email]
@@ -16692,9 +16692,9 @@ java.io.IOException: An established connection was aborted by the software in yo
 2024-12-02T08:00:39.193+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /login
 2024-12-02T08:00:39.194+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
 2024-12-02T08:00:39.196+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T08:00:39.196+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T08:00:39.196+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T08:00:39.197+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@5a3b8a23
-2024-12-02T08:00:39.197+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email) 
+2024-12-02T08:00:39.197+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email)
 2024-12-02T08:00:39.197+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-3] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email]
@@ -16764,7 +16764,7 @@ java.io.IOException: An established connection was aborted by the software in yo
 2024-12-02T08:00:39.376+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.h.e.t.internal.TransactionImpl         : begin
 2024-12-02T08:00:39.377+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7d48bab2]
 2024-12-02T08:00:39.378+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T08:00:39.378+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(2345112292600))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T08:00:39.378+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(2345112292600))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T08:00:39.379+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-4] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(2345112292600)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(2345112292600).email]
@@ -17327,9 +17327,9 @@ java.io.EOFException: null
 2024-12-02T08:07:22.302+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /login
 2024-12-02T08:07:22.303+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
 2024-12-02T08:07:22.305+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T08:07:22.305+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T08:07:22.305+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T08:07:22.306+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@60dd5a74
-2024-12-02T08:07:22.307+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email) 
+2024-12-02T08:07:22.307+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email)
 2024-12-02T08:07:22.307+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-5] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(1973302642200).email]
@@ -17399,7 +17399,7 @@ java.io.EOFException: null
 2024-12-02T08:07:22.621+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-2] o.h.e.t.internal.TransactionImpl         : begin
 2024-12-02T08:07:22.622+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@78dd4169]
 2024-12-02T08:07:22.623+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-2] org.hibernate.orm.sql.ast.create         : Created new SQL alias : u1_0
-2024-12-02T08:07:22.624+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-2] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(2748356767700))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User] 
+2024-12-02T08:07:22.624+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-2] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.ProjectFinalYr.CSE.registrationlogin.entity.User(2748356767700))] with identifierForTableGroup [com.ProjectFinalYr.CSE.registrationlogin.entity.User] for NavigablePath [com.ProjectFinalYr.CSE.registrationlogin.entity.User]
 2024-12-02T08:07:22.625+05:30 DEBUG 6632 --- [ProjectFinalYr] [http-nio-8080-exec-2] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
  \-EntityResultImpl [com.ProjectFinalYr.CSE.registrationlogin.entity.User(2748356767700)]
  |  +-BasicFetch [com.ProjectFinalYr.CSE.registrationlogin.entity.User(2748356767700).email]

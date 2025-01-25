@@ -9,8 +9,35 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        /* Loader styles */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            visibility: hidden;
+        }
+        #loader .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
 </head>
 <body>
+<!-- Loader -->
+<div id="loader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -107,12 +134,16 @@
     document.getElementById('classificationForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
+        const loader = document.getElementById('loader');
+        loader.style.visibility = 'visible';
+
         const formData = new FormData(this);
         fetch('/run-python', {
             method: 'POST',
             body: formData
         })
             .then(response => {
+                loader.style.visibility = 'hidden';
                 if (response.ok) {
                     window.location.href = '/op';
                 } else {
@@ -120,10 +151,10 @@
                 }
             })
             .catch(() => {
+                loader.style.visibility = 'hidden';
                 alert('An error occurred. Please check your input and try again.');
             });
     });
 </script>
-
 </body>
 </html>

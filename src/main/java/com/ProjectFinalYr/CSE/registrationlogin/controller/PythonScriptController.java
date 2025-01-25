@@ -38,7 +38,7 @@ public class PythonScriptController {
 //    @Value("${spring.resources.static-locations}")
 //    private String staticLocation;
 
-   private String staticLocation = "C:/Users/User/OneDrive/Desktop/ProjectFinalYr/static/";
+    private String staticLocation = "C:/Users/User/OneDrive/Desktop/ProjectFinalYr/static/";
 
 
 

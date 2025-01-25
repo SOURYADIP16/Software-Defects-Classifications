@@ -1,7 +1,7 @@
 import pandas as pd
 from lightgbm import LGBMClassifier
 from sklearn.ensemble import AdaBoostClassifier, GradientBoostingClassifier, RandomForestClassifier
-from sklearn.metrics import confusion_matrix, roc_auc_score, roc_curve
+from sklearn.metrics import confusion_matrix, roc_auc_score, roc_curve, accuracy_score, recall_score, precision_score
 from sklearn.model_selection import train_test_split, cross_val_predict
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -33,13 +33,19 @@ def run_model(csv_file):
     print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 
     # Model evaluation function
-    def eval(clfname, y_test, y_pred):
+    def eval(clfname, y_test, y_pred, model=None, X_test=None):
         con_matrx = confusion_matrix(y_test, y_pred)
         tn, fp, fn, tp = con_matrx.ravel()
         acc = (tp + tn) / (tp + tn + fp + fn) * 100
         rcall = tp / (tp + fn)
         precs = tp / (tp + fp)
-        roc = roc_auc_score(y_test, y_pred)
+
+        # Use probabilities for ROC AUC if available
+        if model is not None and X_test is not None and hasattr(model, "predict_proba"):
+            probas = model.predict_proba(X_test)[:, 1]
+            roc = roc_auc_score(y_test, probas)
+        else:
+            roc = roc_auc_score(y_test, y_pred)
 
         # Plot confusion matrix
         plt.figure(figsize=(5, 5))
@@ -53,7 +59,11 @@ def run_model(csv_file):
         plt.close()
 
         # Plot ROC curve
-        fpr, tpr, _ = roc_curve(y_test, y_pred)
+        if model is not None and X_test is not None and hasattr(model, "predict_proba"):
+            fpr, tpr, _ = roc_curve(y_test, probas)
+        else:
+            fpr, tpr, _ = roc_curve(y_test, y_pred)
+
         plt.figure(figsize=(5, 5))
         plt.plot(fpr, tpr, color='blue', label=f'{clfname} (ROC AUC = {roc:.2f})')
         plt.plot([0, 1], [0, 1], color='grey', linestyle='--')
@@ -71,58 +81,66 @@ def run_model(csv_file):
         print(f"Precision: {precs:.2f}")
         print(f"ROC AUC: {roc:.2f}\n")
 
-    # KNN Classifier
-    knn_c = KNeighborsClassifier(n_neighbors=5)
-    y_pred = cross_val_predict(knn_c, X_test, y_test, cv=5)
-    eval("KNeighborsClassifier", y_test, y_pred)
+        return roc, acc, rcall, precs
 
-    # Decision Tree Classifier
-    tree_c = DecisionTreeClassifier(random_state=0)
-    y_pred = cross_val_predict(tree_c, X_test, y_test, cv=5)
-    eval("DecisionTreeClassifier", y_test, y_pred)
+    # Initialize classifiers
+    classifiers = [
+        ("KNeighborsClassifier", KNeighborsClassifier(n_neighbors=5)),
+        ("DecisionTreeClassifier", DecisionTreeClassifier(random_state=0)),
+        ("AdaBoostClassifier", AdaBoostClassifier(n_estimators=100, random_state=0)),
+        ("GradientBoostingClassifier", GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)),
+        ("RandomForestClassifier", RandomForestClassifier(max_depth=2, random_state=0))
+    ]
 
-    # AdaBoost Classifier
-    adaB_c = AdaBoostClassifier(n_estimators=100, random_state=0)
-    y_pred = cross_val_predict(adaB_c, X_test, y_test, cv=5)
-    eval("AdaBoostClassifier", y_test, y_pred)
+    # Dictionary to store evaluation metrics for each classifier
+    metrics = {}
 
-    # Gradient Boosting Classifier
-    GB_c = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)
-    y_pred = cross_val_predict(GB_c, X_test, y_test, cv=5)
-    eval("GradientBoostingClassifier", y_test, y_pred)
-
-    # RandomForest Classifier
-    RF_c = RandomForestClassifier(max_depth=2, random_state=0)
-    y_pred = cross_val_predict(RF_c, X_test, y_test, cv=5)
-    eval("RandomForestClassifier", y_test, y_pred)
-
-    # Scoring for each classifier
-    classifiers = [knn_c, tree_c, adaB_c, GB_c, RF_c]
-    names = ["KNeighborsClassifier", "DecisionTreeClassifier", "AdaBoostClassifier",
-             "GradientBoostingClassifier", "RandomForestClassifier"]
-
-    # Initialize an empty dictionary to store ROC AUC scores
-    roc_scores = {}
-
-    for clf, name in zip(classifiers, names):
+    # Train and evaluate each classifier
+    for clf_name, clf in classifiers:
         clf.fit(X_train, y_train)
-        y_pred = clf.predict_proba(X_test)[:, 1]
-        roc = roc_auc_score(y_test, y_pred)
-        roc_scores[name] = roc
-        print(f"{name} ROC AUC Score: {roc:.2f}")
+        y_pred = cross_val_predict(clf, X_test, y_test, cv=5)
 
-    # Determine the optimized algorithm based on ROC AUC scores
-    optimized_algorithm = max(roc_scores, key=roc_scores.get)
-    print(f"The optimized algorithm based on ROC AUC score is: {optimized_algorithm}")
+        # Get the evaluation metrics
+        roc, acc, rcall, precs = eval(clf_name, y_test, y_pred, clf, X_test)
+
+        # Store the metrics in a dictionary
+        metrics[clf_name] = {
+            "ROC AUC": roc,
+            "Accuracy": acc,
+            "Recall": rcall,
+            "Precision": precs
+        }
+
+    # Print metrics for debugging before sorting
+    print("\nMetrics for each model before sorting:")
+    for clf_name, clf_metrics in metrics.items():
+        print(f"{clf_name}: {clf_metrics}")
+
+    # Ranking the models based on the priority criteria: ROC AUC > Precision > Recall > Accuracy
+    ranked_models = sorted(metrics.items(), key=lambda item: (
+        -item[1]["ROC AUC"],         # Highest ROC AUC
+        -item[1]["Precision"],       # If ROC AUC is the same, highest Precision
+        -item[1]["Recall"],          # If both ROC AUC and Precision are the same, highest Recall
+        -item[1]["Accuracy"]         # If all the above are the same, highest Accuracy
+    ))
+
+    # Print the sorted models
+    print("\nModel Ranking based on Priority (ROC AUC > Precision > Recall > Accuracy):\n")
+    for i, (model_name, metrics) in enumerate(ranked_models, 1):
+        print(f"{i}. {model_name}: ROC AUC = {metrics['ROC AUC']:.2f}, Accuracy = {metrics['Accuracy']:.2f}%, "
+              f"Recall = {metrics['Recall']:.2f}, Precision = {metrics['Precision']:.2f}")
+
+    # Optimized algorithm (first in the sorted list)
+    optimized_algorithm = ranked_models[0][0]
+    print(f"\nThe optimized algorithm based on ROC AUC, Precision, Recall, and Accuracy is: {optimized_algorithm}")
 
     # Plot ROC AUC comparison for all classifiers
     plt.figure(figsize=(10, 6))
-    plt.bar(roc_scores.keys(), roc_scores.values(), color='skyblue')
+    plt.bar([model[0] for model in ranked_models], [model[1]["ROC AUC"] for model in ranked_models], color='skyblue')
     plt.title("ROC AUC Comparison of Classifiers")
     plt.xlabel("Classifier")
     plt.ylabel("ROC AUC Score")
     plt.savefig("static/roc_auc_comparison.png")
-
 
 
 if __name__ == "__main__":
